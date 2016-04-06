@@ -40,6 +40,7 @@ sudo ln -s ~/apps/homeapp /var/www/homeapp
 mkdir ~/config
 cd ~/config
 git clone git@github.com:LiteWave/server.git
+cd server
 sudo cp nginx.conf /etc/nginx/
 sudo cp conf.d/apps.conf /etc/nginx/conf.d/
 
