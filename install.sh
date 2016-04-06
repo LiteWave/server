@@ -1,9 +1,6 @@
 #!/bin/bash
 
-## begin this script by first doing the following:
-#mkdir ~/config
-#cd ~/config
-#git clone git@github.com:LiteWave/server.git
+## run this script on the server
 
 sudo apt-get update
 sudo apt-get install nginx
@@ -40,11 +37,13 @@ sudo ln -s ~/apps/adminapp /var/www/adminapp
 sudo ln -s ~/apps/homeapp /var/www/homeapp
 
 # set up nginx configs (assuming this repo is located at ~/config/server)
-
-sudo cp ~/config/server/nginx.conf /etc/nginx/
-sudo cp ~/config/server/conf.d/apps.conf /etc/nginx/conf.d/
+mkdir ~/config
+cd ~/config
+git clone git@github.com:LiteWave/server.git
+sudo cp nginx.conf /etc/nginx/
+sudo cp conf.d/apps.conf /etc/nginx/conf.d/
 
 sudo mkdir /etc/nginx/include.d
-sudo cp ~/config/server/include.d/common.conf /etc/nginx/include.d/
+sudo cp include.d/common.conf /etc/nginx/include.d/
 
 sudo service nginx restart
