@@ -7,6 +7,8 @@ sudo apt-get install nginx
 sudo apt-get install git
 sudo apt-get install keychain
 sudo apt-get install python-pip
+sudo apt-get install zip
+sudo apt-get install unzip
 sudo pip install nodeenv
 
 ssh-keygen
