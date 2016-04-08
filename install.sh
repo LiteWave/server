@@ -9,6 +9,7 @@ sudo apt-get install keychain
 sudo apt-get install python-pip
 sudo apt-get install zip
 sudo apt-get install unzip
+sudo apt-get install ntp
 sudo pip install nodeenv
 
 ssh-keygen
