@@ -14,9 +14,15 @@ sudo pip install nodeenv
 
 ssh-keygen
 
+# configs
+mkdir ~/config
+cd ~/config
+git clone git@github.com:LiteWave/server.git
+cd server
 sudo cp .bash_profile ~/
 source ~/.bash_profile
 
+#apps
 mkdir ~/apps
 cd ~/apps
 
@@ -40,10 +46,7 @@ sudo ln -s ~/apps/adminapp /var/www/adminapp
 sudo ln -s ~/apps/homeapp /var/www/homeapp
 
 # set up nginx configs (assuming this repo is located at ~/config/server)
-mkdir ~/config
-cd ~/config
-git clone git@github.com:LiteWave/server.git
-cd server
+cd ~/config/server
 sudo cp nginx.conf /etc/nginx/
 sudo cp conf.d/apps.conf /etc/nginx/conf.d/
 
